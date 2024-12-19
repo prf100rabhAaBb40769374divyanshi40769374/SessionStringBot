@@ -60,7 +60,7 @@ async def generate_session(
     user_id = msg.chat.id
     try:
         api_id_msg = await bot.ask_message(
-            user_id, "Please send your `API_ID`", filters=filters.text, timeout=360
+            user_id, "Please send your `API_ID`\n\n Example: `26598255`", filters=filters.text, timeout=360
         )
     except TimeoutError:
         await msg.reply_text("Request timed out, please try again with /start")
@@ -81,7 +81,7 @@ async def generate_session(
 
     try:
         api_hash_msg = await bot.ask_message(
-            user_id, "Please send your `API_HASH`", filters=filters.text, timeout=360
+            user_id, "Please send your `API_HASH`\n\n Example: `2851fb6ab1bdcd0fcaf768dfcb923ffb`", filters=filters.text, timeout=360
         )
     except TimeoutError:
         await msg.reply_text("Request timed out, please try again with /start")

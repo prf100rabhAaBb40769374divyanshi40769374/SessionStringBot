@@ -3,12 +3,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_ID = os.getenv("API_ID", "26598255").strip()
-API_HASH = os.getenv("API_HASH", "2851fb6ab1bdcd0fcaf768dfcb923ffb").strip()
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7575561551:AAF4FpCmHFKD6dTfXXscoPihbpOnwdD-HbQ").strip()
-DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://vivek:1234567890@cluster0.c48d8ih.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").strip() # Not a necessary variable anymore but you can add to get stats
-MUST_JOIN = os.getenv("MUST_JOIN", "https://t.me/PROFESSORxBOTS")
-OWNER_ID = os.getenv("OWNER_ID", "7400823450").strip()
+API_ID = os.getenv("API_ID", "").strip()
+API_HASH = os.getenv("API_HASH", "").strip()
+BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+DATABASE_URL = os.getenv("DATABASE_URL", "").strip() # Not a necessary variable anymore but you can add to get stats
+MUST_JOIN = os.getenv("MUST_JOIN", "")
 
 if not API_ID:
     raise SystemExit("No API_ID found. Exiting...")
